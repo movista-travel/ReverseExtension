@@ -355,6 +355,10 @@ extension UITableView {
             let indexPath = reversedIndexPath(with: indexPath, fromReversed: true)
             return nonNilBase.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         }
+        
+        public func setContentOffset(_ contentOffset: CGPoint, animated: Bool) {
+            base?.setContentOffset(contentOffset, animated: animated)
+        }
     }
 }
 
